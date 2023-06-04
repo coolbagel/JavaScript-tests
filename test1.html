@@ -7,8 +7,24 @@
 <body>
   <script>
     // Your JavaScript goes here!
-    var a=6;
-    let b=7*a;
+    let uname=prompt('Who dares to enter?','');
+    if(uname=='Cancel'){
+      alert('Canceled');
+    }
+    else if(uname=='Admin'){
+      let password=prompt('Magic word?','');
+      
+      if(password=='Cancel'){
+      alert('Canceled');
+    }
+    else if(password=='TheMaster') alert('It really is you.  Sup nerd.');
+    else{
+        alert('wrong, try again');
+    }
+    
+    }
+    else alert('wtf i dont know u');
+
     
     
 

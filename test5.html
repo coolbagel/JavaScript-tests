@@ -68,20 +68,22 @@
 
 
         
-        function game(playerSelection,playerscore,compscore){
+        function game(playerscore,compscore){
             
             for(let i=0; i<5; i++){
+                var playerSelection=prompt("rock, paper, or scissors: ",'');
                 var computerSelection = getComputerChoice();
-                console.log("Computer picks: " + computerSelection);
+                console.log("Player picks: " + playerSelection);
+                console.log("Computer picks: " + computerSelection+"\n");
                 playRound(playerSelection,computerSelection);
             }
             
         }
         
 
-        var playerSelection="rock";
+        
   
-        game(playerSelection,playerscore,compscore);
+        game(playerscore,compscore);
 
         if(playerscore==compscore) console.log("draw");
         else if(playerscore>compscore) console.log("you win!");

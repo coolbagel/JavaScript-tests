@@ -44,3 +44,43 @@ newDivH1.classList.add('newDivh1');
 newDivH1.textContent = 'I\'m an h1 in a div!';
 
 parentDiv.appendChild(newDivH1);
+
+
+//all buttons
+
+//turns all buttons under class 'but' blue when clicked
+   const btns = document.querySelectorAll('button[class^=but]')
+
+   btns.forEach(but => {
+   
+      but.addEventListener('click', event => {
+           console.log( event.target.id );
+           event.target.style.background='blue';
+      });
+   
+   });
+
+
+
+
+//button (1)
+
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+
+//button 2
+
+const btn2 = document.querySelector('#btn2');
+btn2.addEventListener('click',()=>{
+    alert("Hello world! (but done differently).")
+});
+
+//button 3
+
+const btn3 = document.querySelector('#btn3');
+btn3.addEventListener('click', function (e) {
+    e.target.style.background = 'blue'; //sets clicked button background to blue?
+    console.log(e);
+    alert('type of event: ' + e);
+    alert('clicked target: ' + e.target);
+  });
